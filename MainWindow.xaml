@@ -1,0 +1,30 @@
+﻿<Window x:Class="MutiViewModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MutiViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    <Grid Background="SkyBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Command="{Binding CmdClick}" Content="Parent" Height="30" Width="100"/>
+            <TextBox Grid.Column="1" Text="{Binding VmTxt}" Height="30" Width="253"/>
+        </Grid>
+        <local:Upper Grid.Row="1" DataContext="{Binding VmUpper}" Margin="10,10,10,10" Background="AliceBlue"/>
+        <local:Lower Grid.Row="2" DataContext="{Binding VmLower}" Margin="10,10,10,10" Background="AliceBlue"/>
+
+    </Grid>
+</Window>
