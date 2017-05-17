@@ -60,7 +60,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="InputTextBox.cs" />
     <Compile Include="Lower.xaml.cs">
       <DependentUpon>Lower.xaml</DependentUpon>
     </Compile>

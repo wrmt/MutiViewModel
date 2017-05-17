@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace MutiViewModel
 {
-    class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         #region Text
         private string vmTxt;
